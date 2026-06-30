@@ -1,0 +1,87 @@
+settings:
+  broadcast-punishments: true
+  log-folder: "Log auf Punishments"
+  default-preset: "default"
+  block-muted-commands:
+    - "msg"
+    - "tell"
+    - "w"
+    - "me"
+    - "r"
+
+messages:
+  prefix: "&8[&cPunish&8]&r "
+  no-permission: "&cYou do not have permission."
+  player-not-found: "&cThat player is not online."
+  reloaded: "&aUDPunishments reloaded."
+  usage-ban: "&cUsage: /punishban <player> <duration|perm> <preset|reason...>"
+  usage-ipban: "&cUsage: /punishipban <player|ip> <duration|perm> <preset|reason...>"
+  usage-kick: "&cUsage: /punishkick <player> <preset|reason...>"
+  usage-mute: "&cUsage: /punishmute <player> <duration|perm> <preset|reason...>"
+  usage-warn: "&cUsage: /punishwarn <player> <preset|reason...>"
+  muted-chat: "&cYou are muted. Reason: &f{reason}&c. Expires: &f{expires}&c."
+  unmuted: "&a{player} has been unmuted."
+  not-muted: "&c{player} is not muted."
+  history-empty: "&7No punishments recorded for {player}."
+  history-line: "&7#{id} &c{type} &7by &f{staff} &7for &f{reason} &8({created})"
+
+presets:
+  default:
+    reason: "Breaking the server rules"
+    broadcast: "&8[&cPunishment&8] &f{player} &7was punished by &f{staff}&7. Reason: &c{reason}&7. Duration: &c{duration}&7."
+    target-message:
+      - "&cYou have been punished."
+      - "&7Staff: &f{staff}"
+      - "&7Reason: &f{reason}"
+      - "&7Duration: &f{duration}"
+  cheating:
+    reason: "Unfair advantage"
+    broadcast: "&8[&cAnti-Cheat&8] &f{player} &7was removed by &f{staff}&7 for &c{reason}&7."
+    target-message:
+      - "&cYou are banned from this server."
+      - "&7Reason: &f{reason}"
+      - "&7Staff: &f{staff}"
+      - "&7Expires: &f{expires}"
+  toxicity:
+    reason: "Toxic behavior"
+    broadcast: "&8[&6Moderation&8] &f{player} &7was punished for &e{reason}&7."
+    target-message:
+      - "&6A punishment was applied to your account."
+      - "&7Reason: &f{reason}"
+      - "&7Staff: &f{staff}"
+      - "&7Duration: &f{duration}"
+
+punishment-messages:
+  ban-kick:
+    - "&cYou are banned from this server."
+    - ""
+    - "&7Reason: &f{reason}"
+    - "&7Staff: &f{staff}"
+    - "&7Expires: &f{expires}"
+  ipban-kick:
+    - "&cYour IP is banned from this server."
+    - ""
+    - "&7Reason: &f{reason}"
+    - "&7Staff: &f{staff}"
+    - "&7Expires: &f{expires}"
+  kick:
+    - "&cYou were kicked from the server."
+    - ""
+    - "&7Reason: &f{reason}"
+    - "&7Staff: &f{staff}"
+  mute-target:
+    - "&cYou have been muted."
+    - "&7Reason: &f{reason}"
+    - "&7Staff: &f{staff}"
+    - "&7Expires: &f{expires}"
+
+warning:
+  title: "&cWARNING"
+  subtitle: "&f{reason}"
+  fade-in: 5
+  stay: 45
+  fade-out: 10
+  chat:
+    - "&cYou have received a warning."
+    - "&7Staff: &f{staff}"
+    - "&7Reason: &f{reason}"

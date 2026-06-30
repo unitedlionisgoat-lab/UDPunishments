@@ -1,0 +1,65 @@
+name: UDPunishments
+version: 1.0.0
+main: com.example.udpunishments.UDPunishmentsPlugin
+api-version: 1.13
+folia-supported: true
+author: Codex
+description: Custom punishments with broadcasts, presets, warning flashes, and logs.
+commands:
+  punishban:
+    description: Permanently or temporarily ban a player.
+    usage: /punishban <player> <duration|perm> <preset|reason...>
+    aliases: [pban, cban]
+  punishipban:
+    description: Permanently or temporarily IP ban a player or address.
+    usage: /punishipban <player|ip> <duration|perm> <preset|reason...>
+    aliases: [pipban, cipban]
+  punishkick:
+    description: Kick a player.
+    usage: /punishkick <player> <preset|reason...>
+    aliases: [pkick, ckick]
+  punishmute:
+    description: Permanently or temporarily mute a player.
+    usage: /punishmute <player> <duration|perm> <preset|reason...>
+    aliases: [pmute, cmute]
+  punishunmute:
+    description: Remove a mute.
+    usage: /punishunmute <player>
+    aliases: [punmute, cunmute]
+  punishwarn:
+    description: Warn a player with a private flashing title.
+    usage: /punishwarn <player> <preset|reason...>
+    aliases: [pwarn, cwarn]
+  punishhistory:
+    description: View recent punishment records for a player.
+    usage: /punishhistory <player>
+    aliases: [phistory, chistory]
+  punishreload:
+    description: Reload UDPunishments.
+    usage: /punishreload
+permissions:
+  udpunishments.admin:
+    description: Allows all UDPunishments commands.
+    default: op
+    children:
+      udpunishments.ban: true
+      udpunishments.ipban: true
+      udpunishments.kick: true
+      udpunishments.mute: true
+      udpunishments.warn: true
+      udpunishments.history: true
+      udpunishments.reload: true
+  udpunishments.ban:
+    default: op
+  udpunishments.ipban:
+    default: op
+  udpunishments.kick:
+    default: op
+  udpunishments.mute:
+    default: op
+  udpunishments.warn:
+    default: op
+  udpunishments.history:
+    default: op
+  udpunishments.reload:
+    default: op
